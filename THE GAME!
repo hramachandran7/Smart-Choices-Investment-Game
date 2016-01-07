@@ -1,0 +1,1320 @@
+import random
+import sys
+GOOG=500
+T=25
+USO=100
+CSCO=50
+BRCM=45
+GPRO=100
+RISK=30000
+AVGO=45
+BRKB=2000
+SSNGY=1000
+whileloop=0
+name=input("What is your name?: ")
+print("Hello",name,", Welcome to the Smart Choices Investments Game V1.0!")
+inputinstruct=input("Press I for instructions or any other key to skip.: ").lower()
+if inputinstruct=="i":
+    print("In this game you start off with $100,000 dollars to invest. You can invest this money in 5 stocks that you think will increse in value. If the quantity of the stock you are choosing is too high such that you cannot afford it, you will be in debt. If you turn your $100,000 into something more than $100,000 within 100 days(this 100 day period will pass by immediately in this game),you win the game! Next to every stock symbol there will be an average volatility percentage(per day), the risk involved in an investment, and the price of the stock. If you end up with $100,000 or less, you lose the game. Enjoy! Note: The figures shown in this game will likely not be how they will be in real life.")
+inputplayone=input("Press Q to quit or any other key to play.: ").lower()
+if inputplayone=="q":
+    sys.exit
+else:
+    while whileloop==0:
+        money=100000
+        loopcount=0
+        GOOGEND=0
+        TEND=0
+        USOEND=0
+        CSCOEND=0
+        BRCMEND=0
+        GPROEND=0
+        RISKEND=0
+        AVGOEND=0
+        BRKBEND=0
+        SSNGYEND=0
+        print("Num:       Symbol:       Volatility:       Risk:                  Price:")
+        print("1.         GOOG              2%            Not Very Risky         $500  ")
+        print("2.         T                 1%            Risky                  $25   ")
+        print("3.         USO               3%            Very Risky             $100  ")
+        print("4.         CSCO              1%            Not Very Risky         $50   ")
+        print("5.         BRCM              2%            Average Risk           $45   ")
+        print("6.         GPRO              5%            Not Very Risky         $100  ")
+        print("7.         RISK             50%            Extremely Risky        $30000")
+        print("8.         AVGO              3%            Average Risk           $45   ")
+        print("9.         BRK.B             5%            Average Risk           $2000 ")
+        print("10.        SSNGY             3%            Average Risk           $1000 ")
+        choiceone=input("Type in your first stock's symbol.: ").upper()
+        qone=input("How much of this stock do you want to buy?: ")
+        qonef=float(qone)
+        if choiceone=="GOOG":
+            MONONE=GOOG*qonef
+            money=money-MONONE
+            if money<0:
+                print("That is not a valid quantity!")
+
+                print("Sorry, now you are in debt!")
+        if choiceone=="T":
+            MONONE=T*qonef
+            money=money-MONONE
+            if money<0:
+                print("That is not a valid quantity!")
+           
+                print("Sorry, now you are in debt!")
+        if choiceone=="USO":
+            MONONE=USO*qonef
+            money=money-MONONE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choiceone=="CSCO":
+            MONONE=CSCO*qonef
+            money=money-MONONE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choiceone=="BRCM":
+            MONONE=BRCM*qonef
+            money=money-MONONE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choiceone=="GPRO":
+            MONONE=GPRO*qonef
+            money=money-MONONE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choiceone=="RISK":
+            MONONE=RISK*qonef
+            money=money-MONONE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choiceone=="AVGO":
+            MONONE=AVGO*qonef
+            money=money-MONONE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choiceone=="BRK.B":
+            MONONE=BRKB*qonef
+            money=money-MONONE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choiceone=="SSNGY":
+            MONONE=SSNGY*qonef
+            money=money-MONONE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        print("You now have",money,"money")
+        choicetwo=input("Type in your second stock's symbol.: ").upper()
+        qtwo=input("How much of this stock do you want to buy?: ")
+        qtwof=float(qtwo)
+        if choicetwo=="GOOG":
+            MONTWO=GOOG*qtwof
+            money=money-MONTWO
+            if money<0:
+                print("That is not a valid quantity!")
+             
+                print("Sorry, now you are in debt!")
+        if choicetwo=="T":
+            MONTWO=T*qtwof
+            money=money-MONTWO
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicetwo=="USO":
+            MONTWO=USO*qtwof
+            money=money-MONTWO
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicetwo=="CSCO":
+            MONTWO=CSCO*qtwof
+            money=money-MONTWO
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicetwo=="BRCM":
+            MONTWO=BRCM*qtwof
+            money=money-MONTWO
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicetwo=="GPRO":
+            MONTWO=GPRO*qtwof
+            money=money-MONTWO
+            if money<0:
+                print("That is not a valid quantity!")
+               
+                print("Sorry, now you are in debt!")
+        if choicetwo=="RISK":
+            MONTWO=RISK*qtwof
+            money=money-MONTWO
+            if money<0:
+                print("That is not a valid quantity!")
+               
+                print("Sorry, now you are in debt!")
+        if choicetwo=="AVGO":
+            MONTWO=AVGO*qtwof
+            money=money-MONTWO
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicetwo=="BRK.B":
+            MONTWO=BRKB*qtwof
+            money=money-MONTWO
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicetwo=="SSNGY":
+            MONTWO=SSNGY*qtwof
+            money=money-MONTWO
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        print("You now have",money,"money")
+        choicethree=input("Type in your third stock's symbol.: ").upper()
+        qthree=input("How much of this stock do you want to buy?: ")
+        qthreef=float(qthree)
+        if choicethree=="GOOG":
+            MONTHREE=GOOG*qthreef
+            money=money-MONTHREE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicethree=="T":
+            MONTHREE=T*qthreef
+            money=money-MONTHREE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicethree=="USO":
+            MONTHREE=USO*qthreef
+            money=money-MONTHREE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicethree=="CSCO":
+            MONTHREE=CSCO*qthreef
+            money=money-MONTHREE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicethree=="BRCM":
+            MONTHREE=BRCM*qthreef
+            money=money-MONTHREE
+            if money<0:
+                print("That is not a valid quantity!")
+               
+                print("Sorry, now you are in debt!")
+        if choicethree=="GPRO":
+            MONTHREE=GPRO*qthreef
+            money=money-MONTHREE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicethree=="RISK":
+            MONTHREE=RISK*qthreef
+            money=money-MONTHREE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicethree=="AVGO":
+            MONTHREE=AVGO*qthreef
+            money=money-MONTHREE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicethree=="BRK.B":
+            MONTHREE=BRKB*qthreef
+            money=money-MONTHREE
+            if money<0:
+                print("That is not a valid quantity!")
+              
+                print("Sorry, now you are in debt!")
+        if choicethree=="SSNGY":
+            MONTHREE=SSNGY*qthreef
+            money=money-MONTHREE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        print("You now have",money,"money")
+        choicefour=input("Type in your fourth stock's symbol.: ").upper()
+        qfour=input("How much of this stock do you want to buy?: ")
+        qfourf=float(qfour)
+        if choicefour=="GOOG":
+            MONFOUR=GOOG*qfourf
+            money=money-MONFOUR
+            if money<0:
+                print("That is not a valid quantity!")
+          
+                print("Sorry, now you are in debt!")
+        if choicefour=="T":
+            MONFOUR=T*qfourf
+            money=money-MONFOUR
+            if money<0:
+                print("That is not a valid quantity!")
+        
+                print("Sorry, now you are in debt!")
+        if choicefour=="USO":
+            MONFOUR=USO*qfourf
+            money=money-MONFOUR
+            if money<0:
+                print("That is not a valid quantity!")
+               
+                print("Sorry, now you are in debt!")
+        if choicefour=="CSCO":
+            MONFOUR=CSCO*qfourf
+            money=money-MONFOUR
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicefour=="BRCM":
+            MONFOUR=BRCM*qfourf
+            money=money-MONFOUR
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicefour=="GPRO":
+            MONFOUR=GPRO*qfourf
+            money=money-MONFOUR
+            if money<0:
+                print("That is not a valid quantity!")
+               
+                print("Sorry, now you are in debt!")
+        if choicefour=="RISK":
+            MONFOUR=RISK*qfourf
+            money=money-MONFOUR
+            if money<0:
+                print("That is not a valid quantity!")
+         
+                print("Sorry, now you are in debt!")
+        if choicefour=="AVGO":
+            MONFOUR=AVGO*qfourf
+            money=money-MONFOUR
+            if money<0:
+                print("That is not a valid quantity!")
+            
+                print("Sorry, now you are in debt!")
+        if choicefour=="BRK.B":
+            MONFOUR=BRKB*qfourf
+            money=money-MONFOUR
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicefour=="SSNGY":
+            MONFOUR=SSNGY*qfourf
+            money=money-MONFOUR
+            if money<0:
+                print("That is not a valid quantity!")
+               
+                print("Sorry, now you are in debt!")
+        print("You now have",money,"money")
+        choicefive=input("Type in your fifth stock's symbol.: ").upper()
+        qfive=input("How much of this stock do you want to buy?: ")
+        qfivef=float(qfive)
+        if choicefive=="GOOG":
+            MONFIVE=GOOG*qfivef
+            money=money-MONFIVE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicefive=="T":
+            MONFIVE=T*qfivef
+            money=money-MONFIVE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicefive=="USO":
+            MONFIVE=USO*qfivef
+            money=money-MONFIVE
+            if money<0:
+                print("That is not a valid quantity!")
+               
+                print("Sorry, now you are in debt!")
+        if choicefive=="CSCO":
+            MONFIVE=CSCO*qfivef
+            money=money-MONFIVE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicefive=="BRCM":
+            MONFIVE=BRCM*qfivef
+            money=money-MONFIVE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicefive=="GPRO":
+            MONFIVE=GPRO*qfivef
+            money=money-MONFIVE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicefive=="RISK":
+            MONFIVE=RISK*qfivef
+            money=money-MONFIVE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicefive=="AVGO":
+            MONFIVE=AVGO*qfivef
+            money=money-MONFIVE
+            if money<0:
+                print("That is not a valid quantity!")
+              
+                print("Sorry, now you are in debt!")
+        if choicefive=="BRK.B":
+            MONFIVE=BRKB*qfivef
+            money=money-MONFIVE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        if choicefive=="SSNGY":
+            MONFIVE=SSNGY*qfivef
+            money=money-MONFIVE
+            if money<0:
+                print("That is not a valid quantity!")
+                
+                print("Sorry, now you are in debt!")
+        print("You now have",money,"money")
+        loopcount=1
+        googrn = random.randint(1, 3);
+        googrn = googrn/100
+        trn = random.randint(0, 2);
+        trn = trn/100
+        usorn = random.randint(2, 4);
+        usorn = usorn/100
+        cscorn = random.randint(0, 2);
+        cscorn = cscorn/100
+        brcmrn = random.randint(1, 3);
+        brcmrn = brcmrn/100
+        gprorn = random.randint(4, 6);
+        gprorn = gprorn/100
+        riskrn = random.randint(49, 51);
+        riskrn = riskrn/100
+        avgorn = random.randint(2, 4);
+        avgorn = avgorn/100
+        brkbrn = random.randint(4, 6);
+        brkbrn = brkbrn/100
+        ssngyrn = random.randint(2, 4);
+        ssngyrn = ssngyrn/100
+        googrisk = random.randint(1, 3);
+        trisk = random.randint(1, 3);
+        usorisk = random.randint(1, 4);
+        cscorisk = random.randint(1, 3);
+        brcmrisk = random.randint(1, 4);
+        gprorisk = random.randint(1, 3);
+        riskrisk = random.randint(1, 6);
+        avgorisk = random.randint(1, 4);
+        brkbrisk = random.randint(1, 4);
+        ssngyrisk = random.randint(1, 4);
+        if googrisk == 1:
+            googud = 1
+        if googrisk == 3:
+            googud = 1
+        else:
+            googud = 2
+        if trisk == 1:
+            tud = 1
+        else:
+            tud = 2
+        if usorisk == 1:
+            usoud = 1
+        else:
+            usoud = 2
+        if cscorisk == 1:
+            cscoud = 1
+        if cscorisk == 3:
+            cscoud = 1
+        else:
+            cscoud = 2
+        if brcmrisk == 1:
+            brcmud = 1
+        if brcmrisk == 3:
+            brcmud = 1
+        else:
+            brcmud = 2
+        if gprorisk == 1:
+            gproud = 1
+        if gprorisk == 3:
+            gproud = 1
+        else:
+            gproud = 2
+        if riskrisk == 1:
+            riskud=1
+        else:
+            riskud=2
+        if avgorisk == 1:
+            avgoud = 1
+        if avgorisk == 3:
+            avgoud = 1
+        else:
+            avgoud = 2
+        if brkbrisk == 1:
+            brkbud = 1
+        if brkbrisk == 3:
+            brkbud = 1
+        else:
+            brkbud = 2
+        if ssngyrisk == 1:
+            ssngyud = 1
+        if ssngyrisk == 3:
+            ssngyud = 1
+        else:
+            ssngyud = 2
+        if choiceone == "GOOG":
+            if googud == 1:
+                GOOGEND=MONONE*googrn
+                GOOGEND=MONONE+GOOGEND
+            else:
+                GOOGEND=MONONE*googrn
+                GOOGEND=MONONE-GOOGEND
+        if choicetwo == "GOOG":
+            if googud == 1:
+                GOOGEND=MONTWO*googrn
+                GOOGEND=MONTWO+GOOGEND
+            else:
+                GOOGEND=MONTWO*googrn
+                GOOGEND=MONTWO-GOOGEND
+        if choicethree == "GOOG":
+            if googud == 1:
+                GOOGEND=MONTHREE*googrn
+                GOOGEND=MONTHREE+GOOGEND
+            else:
+                GOOGEND=MONTHREE*googrn
+                GOOGEND=MONTHREE+GOOGEND
+        if choicefour == "GOOG":
+            if googud == 1:
+                GOOGEND=MONFOUR*googrn
+                GOOGEND=MONFOUR+GOOGEND
+            else:
+                GOOGEND=MONFOUR*googrn
+                GOOGEND=MONFOUR-GOOGEND
+        if choicefive == "GOOG":
+            if googud == 1:
+                GOOGEND=MONFIVE*googrn
+                GOOGEND=MONFIVE+GOOGEND
+            else:
+                GOOGEND=MONFIVE*googrn
+                GOOGEND=MONFIVE+GOOGEND
+        if choiceone == "T":
+            if tud == 1:
+                TEND=MONONE*trn
+                TEND=MONONE+TEND
+            else:
+                TEND=MONONE*trn
+                TEND=MONONE+TEND
+        if choicetwo == "T":
+            if tud == 1:
+                TEND=MONTWO*trn
+                TEND=MONTWO+TEND
+            else:
+                TEND=MONTWO*trn
+                TEND=MONTWO+TEND
+        if choicethree == "T":
+            if tud == 1:
+                TEND=MONTHREE*trn
+                TEND=MONTHREE+TEND
+            else:
+                TEND=MONTHREE*trn
+                TEND=MONTHREE+TEND
+        if choicefour == "T":
+            if tud == 1:
+                TEND=MONFOUR*trn
+                TEND=MONFOUR+TEND
+            else:
+                TEND=MONFOUR*trn
+                TEND=MONFOUR+TEND
+        if choicefive == "T":
+            if tud == 1:
+                TEND=MONFIVE*trn
+                TEND=MONFIVE+trn
+            else:
+                TEND=MONFIVE*trn
+                TEND=MONFIVE-trn
+        if choicetwo == "USO":
+            if usoud == 1:
+                USOEND=MONTWO*usorn
+                USOEND=MONTWO+USOEND
+            else:
+                USOEND=MONTWO*usorn
+                USOEND=MONTWO-USOEND
+        if choiceone == "USO":
+            if usoud == 1:
+                USOEND=MONONE*usorn
+                USOEND=MONONE+USOEND
+            else:
+                USOEND=MONONE*usorn
+                USOEND=MONONE-USOEND
+        if choicethree == "USO":
+            if usoud == 1:
+                USOEND=MONTHREE*usorn
+                USOEND=MONTHREE+USOEND
+            else:
+                USOEND=MONTHREE*usorn
+                USOEND=MONTHREE-USOEND
+        if choicefour == "USO":
+            if cscoud == 1:
+                USOEND=MONFOUR*usorn
+                USOEND=MONFOUR+USOEND
+            else:
+                USOEND=MONFOUR*usorn
+                USOEND=MONFOUR-USOEND
+        if choicefive == "USO":
+            if usoud == 1:
+                USOEND=MONFIVE*usorn
+                USOEND=MONFIVE+USOEND
+            else:
+                USOEND=MONFIVE*usorn
+                USOEND=MONFIVE-USOEND
+        if choicetwo == "CSCO":
+            if cscoud == 1:
+                CSCOEND=MONTWO*cscorn
+                CSCOEND=MONTWO+CSCOEND
+            else:
+                CSCOEND=MONTWO*cscorn
+                CSCOEND=MONTWO-CSCOEND
+        if choiceone == "CSCO":
+            if cscoud == 1:
+                CSCOEND=MONONE*cscorn
+                CSCOEND=MONONE+CSCOEND
+            else:
+                CSCOEND=MONONE*cscorn
+                CSCOEND=MONONE-CSCOEND
+        if choicethree == "CSCO":
+            if cscoud == 1:
+                CSCOEND=MONTHREE*cscorn
+                CSCOEND=MONTHREE+CSCOEND
+            else:
+                CSCOEND=MONTHREE*cscorn
+                CSCOEND=MONTHREE-CSCOEND
+        if choicefour == "CSCO":
+            if cscoud == 1:
+                CSCOEND=MONFOUR*cscorn
+                CSCOEND=MONFOUR+CSCOEND
+            else:
+                CSCOEND=MONFOUR*cscorn
+                CSCOEND=MONFOUR-CSCOEND
+        if choicefive == "CSCO":
+            if cscoud == 1:
+                CSCOEND=MONFIVE*cscorn
+                CSCOEND=MONFIVE+CSCOEND
+            else:
+                CSCOEND=MONFIVE*cscorn
+                CSCOEND=MONFIVE-CSCOEND
+        if choicetwo == "BRCM":
+            if brcmud == 1:
+                BRCMEND=MONTWO*brcmrn
+                BRCMEND=MONTWO+BRCMEND
+            else:
+                BRCMEND=MONTWO*brcmrn
+                BRCMEND=MONTWO-BRCMEND
+        if choiceone == "BRCM":
+            if brcmud == 1:
+                BRCMEND=MONONE*brcmrn
+                BRCMEND=MONONE+BRCMEND
+            else:
+                BRCMEND=MONONE*brcmrn
+                BRCMEND=MONONE-BRCMEND
+        if choicethree == "BRCM":
+            if brcmud == 1:
+                BRCMEND=MONTHREE*brcmrn
+                BRCMEND=MONTHREE+BRCMEND
+            else:
+                BRCMEND=MONTHREE*brcmrn
+                BRCMEND=MONTHREE-BRCMEND
+        if choicefive == "BRCM":
+            if brcmud == 1:
+                BRCMEND=MONFIVE*brcmrn
+                BRCMEND=MONFIVE+BRCMEND
+            else:
+                BRCMEND=MONFIVE*brcmrn
+                BRCMEND=MONFIVE-BRCMEND
+        if choicefour == "BRCM":
+            if brcmud == 1:
+                BRCMEND=MONFOUR*brcmrn
+                BRCMEND=MONFOUR+BRCMEND
+            else:
+                BRCMEND=MONFOUR*brcmrn
+                BRCMEND=MONFOUR-BRCMEND
+        if choiceone == "GPRO":
+            if gproud == 1:
+                GPROEND=MONONE*gprorn
+                GPROEND=MONONE+GPROEND
+            else:
+                GPROEND=MONONE*gprorn
+                GPROEND=MONONE-GPROEND
+        if choicetwo == "GPRO":
+            if gproud == 1:
+                GPROEND=MONTWO*gprorn
+                GPROEND=MONTWO+GPROEND
+            else:
+                GPROEND=MONTWO*gprorn
+                GPROEND=MONTWO-GPROEND
+        if choicethree == "GPRO":
+            if gproud == 1:
+                GPROEND=MONTHREE*gprorn
+                GPROEND=MONTHREE+GPROEND
+            else:
+                GPROEND=MONTHREE*gprorn
+                GPROEND=MONTHREE-GPROEND
+        if choicefour == "GPRO":
+            if gproud == 1:
+                GPROEND=MONFOUR*gprorn
+                GPROEND=MONFOUR+GPROEND
+            else:
+                GPROEND=MONFOUR*gprorn
+                GPROEND=MONFOUR-GPROEND
+        if choicefive == "GPRO":
+            if gproud == 1:
+                GPROEND=MONFIVE*gprorn
+                GPROEND=MONFIVE+GPROEND
+            else:
+                GPROEND=MONFIVE*gprorn
+                GPROEND=MONFIVE-GPROEND
+        if choiceone == "RISK":
+            if riskud == 1:
+                RISKEND=MONONE*riskrn
+                RISKEND=MONONE+RISKEND
+            else:
+                RISKEND=MONONE*riskrn
+                RISKEND=MONONE-RISKEND
+        if choicetwo == "RISK":
+            if riskud == 1:
+                RISKEND=MONTWO*riskrn
+                RISKEND=MONTWO+RISKEND
+            else:
+                RISKEND=MONTWO*riskrn
+                RISKEND=MONTWO-RISKEND
+        if choicethree == "RISK":
+            if riskud == 1:
+                RISKEND=MONTHREE*riskrn
+                RISKEND=MONTHREE+RISKEND
+            else:
+                RISKEND=MONTHREE*riskrn
+                RISKEND=MONTHREE-RISKEND
+        if choicefour == "RISK":
+            if riskud == 1:
+                RISKEND=MONFOUR*riskrn
+                RISKEND=MONFOUR+RISKEND
+            else:
+                RISKEND=MONFOUR*riskrn
+                RISKEND=MONFOUR-RISKEND
+        if choicefive == "RISK":
+            if riskud == 1:
+                RISKEND=MONFIVE*riskrn
+                RISKEND=MONFIVE+RISKEND
+            else:
+                RISKEND=MONFIVE*riskrn
+                RISKEND=MONFIVE-RISKEND
+        if choiceone == "AVGO":
+            if avgoud == 1:
+                AVGOEND=MONONE*avgorn
+                AVGOEND=MONONE+AVGOEND
+            else:
+                AVGOEND=MONONE*avgorn
+                AVGOEND=MONONE-AVGOEND
+        if choicetwo == "AVGO":
+            if avgoud == 1:
+                AVGOEND=MONTWO*avgorn
+                AVGOEND=MONTWO+AVGOEND
+            else:
+                AVGOEND=MONTWO*avgorn
+                AVGOEND=MONTWO-AVGOEND
+        if choicethree == "AVGO":
+            if avgoud == 1:
+                AVGOEND=MONTHREE*avgorn
+                AVGOEND=MONTHREE+AVGOEND
+            else:
+                AVGOEND=MONTHREE*avgorn
+                AVGOEND=MONTHREE-AVGOEND
+        if choicefour == "AVGO":
+            if avgoud == 1:
+                AVGOEND=MONFOUR*avgorn
+                AVGOEND=MONFOUR+AVGOEND
+            else:
+                AVGOEND=MONFOUR*avgorn
+                AVGOEND=MONFOUR-AVGOEND
+        if choicefive == "AVGO":
+            if avgoud == 1:
+                AVGOEND=MONFIVE*avgorn
+                AVGOEND=MONFIVE+AVGOEND
+            else:
+                AVGOEND=MONFIVE*avgorn
+                AVGOEND=MONFIVE-AVGOEND
+        if choiceone == "BRK.B":
+            if brkbud == 1:
+                BRKBEND=MONONE*brkbrn
+                BRKBEND=MONONE+BRKBEND
+            else:
+                BRKBEND=MONONE*brkbrn
+                BRKBEND=MONONE-BRKBEND
+        if choicetwo == "BRK.B":
+            if brkbud == 1:
+                BRKBEND=MONTWO*brkbrn
+                BRKBEND=MONTWO+BRKBEND
+            else:
+                BRKBEND=MONTWO*brkbrn
+                BRKBEND=MONTWO-BRKBEND
+        if choicethree == "BRK.B":
+            if brkbud == 1:
+                BRKBEND=MONTHREE*brkbrn
+                BRKBEND=MONTHREE+BRKBEND
+            else:
+                BRKBEND=MONTHREE*brkbrn
+                BRKBEND=MONTHREE-BRKBEND
+        if choicefour == "BRK.B":
+            if brkbud == 1:
+                BRKBEND=MONFOUR*brkbrn
+                BRKBEND=MONFOUR+BRKBEND
+            else:
+                BRKBEND=MONFOUR*brkbrn
+                BRKBEND=MONFOUR-BRKBEND
+        if choicefive == "BRK.B":
+            if brkbud == 1:
+                BRKBEND=MONFIVE*brkbrn
+                BRKBEND=MONFIVE+BRKBEND
+            else:
+                BRKBEND=MONFIVE*brkbrn
+                BRKBEND=MONFIVE-BRKBEND
+        if choiceone == "SSNGY":
+            if ssngyud == 1:
+                SSNGYEND=MONONE*ssngyrn
+                SSNGYEND=MONONE+SSNGYEND
+            else:
+                SSNGYEND=MONONE*ssngyrn
+                SSNGYEND=MONONE-SSNGYEND
+        if choicetwo == "SSNGY":
+            if ssngyud == 1:
+                SSNGYEND=MONTWO*ssngyrn
+                SSNGYEND=MONTWO+SSNGYEND
+            else:
+                SSNGYEND=MONTWO*ssngyrn
+                SSNGYEND=MONTWO-SSNGYEND
+        if choicethree == "SSNGY":
+            if ssngyud == 1:
+                SSNGYEND=MONTHREE*ssngyrn
+                SSNGYEND=MONTHREE+SSNGYEND
+            else:
+                SSNGYEND=MONTHREE*ssngyrn
+                SSNGYEND=MONTHREE-SSNGYEND
+        if choicefour == "SSNGY":
+            if ssngyud == 1:
+                SSNGYEND=MONFOUR*ssngyrn
+                SSNGYEND=MONFOUR+SSNGYEND
+            else:
+                SSNGYEND=MONFOUR*ssngyrn
+                SSNGYEND=MONFOUR-SSNGYEND
+        if choicefive == "SSNGY":
+            if ssngyud == 1:
+                SSNGYEND=MONFIVE*ssngyrn
+                SSNGYEND=MONFIVE+SSNGYEND
+            else:
+                SSNGYEND=MONFIVE*ssngyrn
+                SSNGYEND=MONFIVE-SSNGYEND
+        money=money+GOOGEND+TEND+USOEND+CSCOEND+BRCMEND+GPROEND+RISKEND+AVGOEND+BRKBEND+SSNGYEND
+        while whileloop==0:
+            loopcount=loopcount+1
+            googrn = random.randint(1, 3);
+            googrn = googrn/100
+            trn = random.randint(0, 2);
+            trn = trn/100
+            usorn = random.randint(2, 4);
+            usorn = usorn/100
+            cscorn = random.randint(0, 2);
+            cscorn = cscorn/100
+            brcmrn = random.randint(1, 3);
+            brcmrn = brcmrn/100
+            gprorn = random.randint(4, 6);
+            gprorn = gprorn/100
+            riskrn = random.randint(49, 51);
+            riskrn = riskrn/100
+            avgorn = random.randint(2, 4);
+            avgorn = avgorn/100
+            brkbrn = random.randint(4, 6);
+            brkbrn = brkbrn/100
+            ssngyrn = random.randint(2, 4);
+            ssngyrn = ssngyrn/100
+            googrisk = random.randint(1, 3);
+            trisk = random.randint(1, 3);
+            usorisk = random.randint(1, 4);
+            cscorisk = random.randint(1, 3);
+            brcmrisk = random.randint(1, 4);
+            gprorisk = random.randint(1, 3);
+            riskrisk = random.randint(1, 6);
+            avgorisk = random.randint(1, 4);
+            brkbrisk = random.randint(1, 4);
+            ssngyrisk = random.randint(1, 4);
+            if googrisk == 1:
+                googud = 1
+            if googrisk == 3:
+                googud = 1
+            else:
+                googud = 2
+            if trisk == 1:
+                tud = 1
+            else:
+                tud = 2
+            if usorisk == 1:
+                usoud = 1
+            else:
+                usoud = 2
+            if cscorisk == 1:
+                cscoud = 1
+            if cscorisk == 3:
+                cscoud = 1
+            else:
+                cscoud = 2
+            if brcmrisk == 1:
+                brcmud = 1
+            if brcmrisk == 3:
+                brcmud = 1
+            else:
+                brcmud = 2
+            if gprorisk == 1:
+                gproud = 1
+            if gprorisk == 3:
+                gproud = 1
+            else:
+                gproud = 2
+            if riskrisk == 1:
+                riskud=1
+            else:
+                riskud=2
+            if avgorisk == 1:
+                avgoud = 1
+            if avgorisk == 3:
+                avgoud = 1
+            else:
+                avgoud = 2
+            if brkbrisk == 1:
+                brkbud = 1
+            if brkbrisk == 3:
+                brkbud = 1
+            else:
+                brkbud = 2
+            if ssngyrisk == 1:
+                ssngyud = 1
+            if ssngyrisk == 3:
+                ssngyud = 1
+            else:
+                ssngyud = 2
+            if choiceone == "GOOG":
+                if googud == 1:
+                    GOOGEND=MONONE*googrn
+                    GOOGEND=MONONE+GOOGEND
+                else:
+                    GOOGEND=MONONE*googrn
+                    GOOGEND=MONONE-GOOGEND
+            if choicetwo == "GOOG":
+                if googud == 1:
+                    GOOGEND=MONTWO*googrn
+                    GOOGEND=MONTWO+GOOGEND
+                else:
+                    GOOGEND=MONTWO*googrn
+                    GOOGEND=MONTWO-GOOGEND
+            if choicethree == "GOOG":
+                if googud == 1:
+                    GOOGEND=MONTHREE*googrn
+                    GOOGEND=MONTHREE+GOOGEND
+                else:
+                    GOOGEND=MONTHREE*googrn
+                    GOOGEND=MONTHREE+GOOGEND
+            if choicefour == "GOOG":
+                if googud == 1:
+                    GOOGEND=MONFOUR*googrn
+                    GOOGEND=MONFOUR+GOOGEND
+                else:
+                    GOOGEND=MONFOUR*googrn
+                    GOOGEND=MONFOUR-GOOGEND
+            if choicefive == "GOOG":
+                if googud == 1:
+                    GOOGEND=MONFIVE*googrn
+                    GOOGEND=MONFIVE+GOOGEND
+                else:
+                    GOOGEND=MONFIVE*googrn
+                    GOOGEND=MONFIVE+GOOGEND
+            if choiceone == "T":
+                if tud == 1:
+                    TEND=MONONE*trn
+                    TEND=MONONE+TEND
+                else:
+                    TEND=MONONE*trn
+                    TEND=MONONE+TEND
+            if choicetwo == "T":
+                if tud == 1:
+                    TEND=MONTWO*trn
+                    TEND=MONTWO+TEND
+                else:
+                    TEND=MONTWO*trn
+                    TEND=MONTWO+TEND
+            if choicethree == "T":
+                if tud == 1:
+                    TEND=MONTHREE*trn
+                    TEND=MONTHREE+TEND
+                else:
+                    TEND=MONTHREE*trn
+                    TEND=MONTHREE+TEND
+            if choicefour == "T":
+                if tud == 1:
+                    TEND=MONFOUR*trn
+                    TEND=MONFOUR+TEND
+                else:                                       
+                    TEND=MONFOUR*trn                        #LINE 1000!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    TEND=MONFOUR+TEND
+            if choicefive == "T":
+                if tud == 1:
+                    TEND=MONFIVE*trn
+                    TEND=MONFIVE+trn
+                else:
+                    TEND=MONFIVE*trn
+                    TEND=MONFIVE-trn
+            if choicetwo == "USO":
+                if usoud == 1:
+                    USOEND=MONTWO*usorn
+                    USOEND=MONTWO+USOEND
+                else:
+                    USOEND=MONTWO*usorn
+                    USOEND=MONTWO-USOEND
+            if choiceone == "USO":
+                if usoud == 1:
+                    USOEND=MONONE*usorn
+                    USOEND=MONONE+USOEND
+                else:
+                    USOEND=MONONE*usorn
+                    USOEND=MONONE-USOEND
+            if choicethree == "USO":
+                if usoud == 1:
+                    USOEND=MONTHREE*usorn
+                    USOEND=MONTHREE+USOEND
+                else:
+                    USOEND=MONTHREE*usorn
+                    USOEND=MONTHREE-USOEND
+            if choicefour == "USO":
+                if cscoud == 1:
+                    USOEND=MONFOUR*usorn
+                    USOEND=MONFOUR+USOEND
+                else:
+                    USOEND=MONFOUR*usorn
+                    USOEND=MONFOUR-USOEND
+            if choicefive == "USO":
+                if usoud == 1:
+                    USOEND=MONFIVE*usorn
+                    USOEND=MONFIVE+USOEND
+                else:
+                    USOEND=MONFIVE*usorn
+                    USOEND=MONFIVE-USOEND
+            if choicetwo == "CSCO":
+                if cscoud == 1:
+                    CSCOEND=MONTWO*cscorn
+                    CSCOEND=MONTWO+CSCOEND
+                else:
+                    CSCOEND=MONTWO*cscorn
+                    CSCOEND=MONTWO-CSCOEND
+            if choiceone == "CSCO":
+                if cscoud == 1:
+                    CSCOEND=MONONE*cscorn
+                    CSCOEND=MONONE+CSCOEND
+                else:
+                    CSCOEND=MONONE*cscorn
+                    CSCOEND=MONONE-CSCOEND
+            if choicethree == "CSCO":
+                if cscoud == 1:
+                    CSCOEND=MONTHREE*cscorn
+                    CSCOEND=MONTHREE+CSCOEND
+                else:
+                    CSCOEND=MONTHREE*cscorn
+                    CSCOEND=MONTHREE-CSCOEND
+            if choicefour == "CSCO":
+                if cscoud == 1:
+                    CSCOEND=MONFOUR*cscorn
+                    CSCOEND=MONFOUR+CSCOEND
+                else:
+                    CSCOEND=MONFOUR*cscorn
+                    CSCOEND=MONFOUR-CSCOEND
+            if choicefive == "CSCO":
+                if cscoud == 1:
+                    CSCOEND=MONFIVE*cscorn
+                    CSCOEND=MONFIVE+CSCOEND
+                else:
+                    CSCOEND=MONFIVE*cscorn
+                    CSCOEND=MONFIVE-CSCOEND
+            if choicetwo == "BRCM":
+                if brcmud == 1:
+                    BRCMEND=MONTWO*brcmrn
+                    BRCMEND=MONTWO+BRCMEND
+                else:
+                    BRCMEND=MONTWO*brcmrn
+                    BRCMEND=MONTWO-BRCMEND
+            if choiceone == "BRCM":
+                if brcmud == 1:
+                    BRCMEND=MONONE*brcmrn
+                    BRCMEND=MONONE+BRCMEND
+                else:
+                    BRCMEND=MONONE*brcmrn
+                    BRCMEND=MONONE-BRCMEND
+            if choicethree == "BRCM":
+                if brcmud == 1:
+                    BRCMEND=MONTHREE*brcmrn
+                    BRCMEND=MONTHREE+BRCMEND
+                else:
+                    BRCMEND=MONTHREE*brcmrn
+                    BRCMEND=MONTHREE-BRCMEND
+            if choicefive == "BRCM":
+                if brcmud == 1:
+                    BRCMEND=MONFIVE*brcmrn
+                    BRCMEND=MONFIVE+BRCMEND
+                else:
+                    BRCMEND=MONFIVE*brcmrn
+                    BRCMEND=MONFIVE-BRCMEND
+            if choicefour == "BRCM":
+                if brcmud == 1:
+                    BRCMEND=MONFOUR*brcmrn
+                    BRCMEND=MONFOUR+BRCMEND
+                else:
+                    BRCMEND=MONFOUR*brcmrn
+                    BRCMEND=MONFOUR-BRCMEND
+            if choiceone == "GPRO":
+                if gproud == 1:
+                    GPROEND=MONONE*gprorn
+                    GPROEND=MONONE+GPROEND
+                else:
+                    GPROEND=MONONE*gprorn
+                    GPROEND=MONONE-GPROEND
+            if choicetwo == "GPRO":
+                if gproud == 1:
+                    GPROEND=MONTWO*gprorn
+                    GPROEND=MONTWO+GPROEND
+                else:
+                    GPROEND=MONTWO*gprorn
+                    GPROEND=MONTWO-GPROEND
+            if choicethree == "GPRO":
+                if gproud == 1:
+                    GPROEND=MONTHREE*gprorn
+                    GPROEND=MONTHREE+GPROEND
+                else:
+                    GPROEND=MONTHREE*gprorn
+                    GPROEND=MONTHREE-GPROEND
+            if choicefour == "GPRO":
+                if gproud == 1:
+                    GPROEND=MONFOUR*gprorn
+                    GPROEND=MONFOUR+GPROEND
+                else:
+                    GPROEND=MONFOUR*gprorn
+                    GPROEND=MONFOUR-GPROEND
+            if choicefive == "GPRO":
+                if gproud == 1:
+                    GPROEND=MONFIVE*gprorn
+                    GPROEND=MONFIVE+GPROEND
+                else:
+                    GPROEND=MONFIVE*gprorn
+                    GPROEND=MONFIVE-GPROEND
+            if choiceone == "RISK":
+                if riskud == 1:
+                    RISKEND=MONONE*riskrn
+                    RISKEND=MONONE+RISKEND
+                else:
+                    RISKEND=MONONE*riskrn
+                    RISKEND=MONONE-RISKEND
+            if choicetwo == "RISK":
+                if riskud == 1:
+                    RISKEND=MONTWO*riskrn
+                    RISKEND=MONTWO+RISKEND
+                else:
+                    RISKEND=MONTWO*riskrn
+                    RISKEND=MONTWO-RISKEND
+            if choicethree == "RISK":
+                if riskud == 1:
+                    RISKEND=MONTHREE*riskrn
+                    RISKEND=MONTHREE+RISKEND
+                else:
+                    RISKEND=MONTHREE*riskrn
+                    RISKEND=MONTHREE-RISKEND
+            if choicefour == "RISK":
+                if riskud == 1:
+                    RISKEND=MONFOUR*riskrn
+                    RISKEND=MONFOUR+RISKEND
+                else:
+                    RISKEND=MONFOUR*riskrn
+                    RISKEND=MONFOUR-RISKEND
+            if choicefive == "RISK":
+                if riskud == 1:
+                    RISKEND=MONFIVE*riskrn
+                    RISKEND=MONFIVE+RISKEND
+                else:
+                    RISKEND=MONFIVE*riskrn
+                    RISKEND=MONFIVE-RISKEND
+            if choiceone == "AVGO":
+                if avgoud == 1:
+                    AVGOEND=MONONE*avgorn
+                    AVGOEND=MONONE+AVGOEND
+                else:
+                    AVGOEND=MONONE*avgorn
+                    AVGOEND=MONONE-AVGOEND
+            if choicetwo == "AVGO":
+                if avgoud == 1:
+                    AVGOEND=MONTWO*avgorn
+                    AVGOEND=MONTWO+AVGOEND
+                else:
+                    AVGOEND=MONTWO*avgorn
+                    AVGOEND=MONTWO-AVGOEND
+            if choicethree == "AVGO":
+                if avgoud == 1:
+                    AVGOEND=MONTHREE*avgorn
+                    AVGOEND=MONTHREE+AVGOEND
+                else:
+                    AVGOEND=MONTHREE*avgorn
+                    AVGOEND=MONTHREE-AVGOEND
+            if choicefour == "AVGO":
+                if avgoud == 1:
+                    AVGOEND=MONFOUR*avgorn
+                    AVGOEND=MONFOUR+AVGOEND
+                else:
+                    AVGOEND=MONFOUR*avgorn
+                    AVGOEND=MONFOUR-AVGOEND
+            if choicefive == "AVGO":
+                if avgoud == 1:
+                    AVGOEND=MONFIVE*avgorn
+                    AVGOEND=MONFIVE+AVGOEND
+                else:
+                    AVGOEND=MONFIVE*avgorn
+                    AVGOEND=MONFIVE-AVGOEND
+            if choiceone == "BRK.B":
+                if brkbud == 1:
+                    BRKBEND=MONONE*brkbrn
+                    BRKBEND=MONONE+BRKBEND
+                else:
+                    BRKBEND=MONONE*brkbrn
+                    BRKBEND=MONONE-BRKBEND
+            if choicetwo == "BRK.B":
+                if brkbud == 1:
+                    BRKBEND=MONTWO*brkbrn
+                    BRKBEND=MONTWO+BRKBEND
+                else:
+                    BRKBEND=MONTWO*brkbrn
+                    BRKBEND=MONTWO-BRKBEND
+            if choicethree == "BRK.B":
+                if brkbud == 1:
+                    BRKBEND=MONTHREE*brkbrn
+                    BRKBEND=MONTHREE+BRKBEND
+                else:
+                    BRKBEND=MONTHREE*brkbrn
+                    BRKBEND=MONTHREE-BRKBEND
+            if choicefour == "BRK.B":
+                if brkbud == 1:
+                    BRKBEND=MONFOUR*brkbrn
+                    BRKBEND=MONFOUR+BRKBEND
+                else:
+                    BRKBEND=MONFOUR*brkbrn
+                    BRKBEND=MONFOUR-BRKBEND
+            if choicefive == "BRK.B":
+                if brkbud == 1:
+                    BRKBEND=MONFIVE*brkbrn
+                    BRKBEND=MONFIVE+BRKBEND
+                else:
+                    BRKBEND=MONFIVE*brkbrn
+                    BRKBEND=MONFIVE-BRKBEND
+            if choiceone == "SSNGY":
+                if ssngyud == 1:
+                    SSNGYEND=MONONE*ssngyrn
+                    SSNGYEND=MONONE+SSNGYEND
+                else:
+                    SSNGYEND=MONONE*ssngyrn
+                    SSNGYEND=MONONE-SSNGYEND
+            if choicetwo == "SSNGY":
+                if ssngyud == 1:
+                    SSNGYEND=MONTWO*ssngyrn
+                    SSNGYEND=MONTWO+SSNGYEND
+                else:
+                    SSNGYEND=MONTWO*ssngyrn
+                    SSNGYEND=MONTWO-SSNGYEND
+            if choicethree == "SSNGY":
+                if ssngyud == 1:
+                    SSNGYEND=MONTHREE*ssngyrn
+                    SSNGYEND=MONTHREE+SSNGYEND
+                else:
+                    SSNGYEND=MONTHREE*ssngyrn
+                    SSNGYEND=MONTHREE-SSNGYEND
+            if choicefour == "SSNGY":
+                if ssngyud == 1:
+                    SSNGYEND=MONFOUR*ssngyrn
+                    SSNGYEND=MONFOUR+SSNGYEND
+                else:
+                    SSNGYEND=MONFOUR*ssngyrn
+                    SSNGYEND=MONFOUR-SSNGYEND
+            if choicefive == "SSNGY":
+                if ssngyud == 1:
+                    SSNGYEND=MONFIVE*ssngyrn
+                    SSNGYEND=MONFIVE+SSNGYEND
+                else:
+                    SSNGYEND=MONFIVE*ssngyrn
+                    SSNGYEND=MONFIVE-SSNGYEND
+            money=money+GOOGEND+TEND+USOEND+CSCOEND+BRCMEND+GPROEND+RISKEND+AVGOEND+BRKBEND+SSNGYEND
+            if loopcount == 100:
+                break
+        print("You ended up with",money,",money.")
+        if money > 100000:
+            print("You Win!")
+        else:
+            print("You Lose.")
+        print("Game Over!")
+        diduenjoy=input("Did you enjoy playing?: ")
+        questionlolololol=input("Thank You! Press any key to exit.")
+        break
+    
+    sys.exit()                             #LAST LINE-1302!!
+    
+        
+                
+        
+       
+        
+                
+        
+                
+        
+            
+    
+        
+        
+        
+        
+        
+        
